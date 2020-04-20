@@ -19,6 +19,13 @@ if type "yum" > /dev/null 2>&1; then
   sudo yum install libxcrypt-compat
 fi
 
+if type "apk" > /dev/null 2>&1; then
+  if type "sudo" > /dev/null 2>&1; then
+    apk add sudo
+  fi
+  sudo apk add bash build-base curl file git gzip libc6-compat ncurses ruby ruby-dbm ruby-etc ruby-irb ruby-json
+fi
+
 if type "git" > /dev/null 2>&1; then
   if [ -d $DOTPATH ]; then
     cd $DOTPATH && git pull
