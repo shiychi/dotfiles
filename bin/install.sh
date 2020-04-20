@@ -15,12 +15,8 @@ function choise {
   done
 }
 
-function start () {
-  if choise "Do you want to start install"; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  else
-    echo "Quit" && exit 0
-  fi
-}
-
-start
+if choise "Do you want to start install"; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+else
+  echo "Quit" && exit 0
+fi
