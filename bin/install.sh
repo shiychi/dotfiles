@@ -7,20 +7,20 @@ if type "apt" > /dev/null 2>&1; then
   if type "sudo" > /dev/null 2>&1; then
     :
   else
-    apt install sudo
+    apt install sudo -y
   fi
-  sudo apt install build-essential curl file git
+  sudo apt install build-essential curl file git -y
 fi
 
 if type "yum" > /dev/null 2>&1; then
   if type "sudo" > /dev/null 2>&1; then
     :
   else
-    yum install sudo
+    yum install sudo -y
   fi
-  sudo yum groupinstall 'Development Tools'
-  sudo yum install curl file git
-  sudo yum install libxcrypt-compat
+  sudo yum groupinstall 'Development Tools' -y
+  sudo yum install curl file git -y
+  sudo yum install libxcrypt-compat -y
 fi
 
 if type "apk" > /dev/null 2>&1; then
