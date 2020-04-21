@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install dotfiles
-        run: bin/install.sh
+        run: sh bin/install.sh
 
   macos:
     runs-on: macos-latest
