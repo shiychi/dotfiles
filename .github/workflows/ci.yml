@@ -23,8 +23,6 @@ jobs:
     container: alpine:latest
     steps:
       - uses: actions/checkout@v1
-      - name: Install required packages
-        run: apk add git sudo bash
       - name: Install dotfiles
         run: bin/install.sh
 
