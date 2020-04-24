@@ -1,0 +1,6 @@
+[Bookmarks]
+[Recent]
+!Local Disk (D:)
+D:\
+D:\blender\
+D:\downloads\
