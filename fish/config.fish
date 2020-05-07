@@ -1,3 +1,5 @@
+set DOTPATH = ~/dotfiles
+
 ## WSL
 switch (pwd)
 case '/mnt/c/Users/*'
