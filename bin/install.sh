@@ -30,8 +30,10 @@ if type "pacman" > /dev/null 2>&1; then
   if type "sudo" > /dev/null 2>&1; then
     :
   else
+    pacman -Sy --noconfirm
     pacman -S sudo --noconfirm
   fi
+  sudo pacman -Sy --noconfirm
   sudo pacman -S curl --noconfirm
   sudo pacman -S file --noconfirm
   sudo pacman -S git --noconfirm
