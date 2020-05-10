@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if [ $(test -d $HOME/.linuxbrew) ]; then
+if [ test -d $HOME/.linuxbrew ]; then
+  :
+else
   git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
   mkdir ~/.linuxbrew/bin
   ln -sfv ~/.linuxbrew/Homebrew/bin/brew ~/.linuxbrew/bin
