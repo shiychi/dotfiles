@@ -16,10 +16,6 @@ fi
 
 cat $DOTPATH/fish/config.fish > ~/.config/fish/config.fish
 
-## RHEL and ArchLinux
-if [ type "yum" > /dev/null 2>&1 ] \
-  || [ type "pacman" > /dev/null 2>&1 ]; then
-    echo `which fish` | sudo tee -a /etc/shells
-fi
+sudo bash -c "echo `which fish` | sudo tee -a /etc/shells"
 
-sudo chsh -s `which fish`
+echo "You need to change the default shell to $(which fish)"
