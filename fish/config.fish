@@ -10,6 +10,7 @@ end
 set -x GPG_TTY (tty)
 set -x PATH $HOME/.linuxbrew/bin $PATH
 set -x PATH /usr/local/opt/ruby/bin $PATH
+set -x PATH $HOME/.cargo/env $PATH
 
 ## Prompt color
 set pure_color_primary 60c79f

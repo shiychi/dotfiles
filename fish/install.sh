@@ -22,4 +22,6 @@ cat $DOTPATH/fish/config.fish > ~/.config/fish/config.fish
 
 sudo bash -c "echo `which fish` | sudo tee -a /etc/shells"
 
-echo "You need to change the default shell to $(which fish)"
+if [ ! $SHELL = $(which fish) ]; then
+  echo "You need to change the default shell to $(which fish)"
+fi
