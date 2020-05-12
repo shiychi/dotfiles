@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo cat /dev/null
+
 if [ -d $HOME/.linuxbrew ]; then
   :
 else
