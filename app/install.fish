@@ -9,4 +9,6 @@ case "rust"
   $DOTPATH/rust/install.fish
 case "deno"
   $DOTPATH/deno/install.fish
+case "nvim"
+  $DOTPATH/nvim/install.fish
 end
