@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOTPATH=~/dotfiles
-DOTURL=https://github.com/mtiyz/dotfiles.git
+DOTURL=https://github.com/norozic/dotfiles.git
 
 if type "apt" > /dev/null 2>&1; then
   if type "sudo" > /dev/null 2>&1; then
