@@ -6,12 +6,9 @@ if [ -d $HOME ]; then
   :
 else
   echo 'Installing Homebrew...'
-  sudo git clone https://github.com/Homebrew/brew $HOME/.linuxbrew/Homebrew
-  if [ "$(uname)" == 'Darwin'  ]; then
-    sed -i 's/\/home/#\/home/g' /etc/auto_master
-  fi
-  sudo mkdir $HOME/.linuxbrew/bin
-  sudo ln -sfv $HOME/.linuxbrew/Homebrew/bin/brew $HOME/.linuxbrew/bin
+  git clone https://github.com/Homebrew/brew $HOME/.linuxbrew/Homebrew
+  mkdir $HOME/.linuxbrew/bin
+  ln -sfv $HOME/.linuxbrew/Homebrew/bin/brew $HOME/.linuxbrew/bin
 fi
 
 if [ -f $HOME/.profile ]; then
