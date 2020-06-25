@@ -62,4 +62,5 @@ fi
 cd $DOTPATH
 /bin/bash ./homebrew/install.sh
 /bin/bash ./fish/install.sh
-$HOME/.linuxbrew/bin/fish
+/bin/bash ./tmux/install.sh
+$HOME/.linuxbrew/bin/tmux
