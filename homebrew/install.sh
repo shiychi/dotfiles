@@ -21,13 +21,6 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 
 echo 'Installing tools...'
 
-## Not WSL
-shopt -s nocasematch
-if [ ! "`uname -a | grep "microsoft"`" ]; then
-  brew install docker
-  brew install docker-compose
-fi
-
 brew install git
 brew install gcc
 brew install curl
@@ -36,6 +29,8 @@ brew install exa
 brew install fd
 brew tap cjbassi/ytop
 brew install ytop
+brew install ghq
+brew install fzf
 
 if [ ! "`sudo fd`" ]; then
   touch ~/sudoers.tmp ~/sudoers.bak

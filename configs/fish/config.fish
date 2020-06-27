@@ -12,6 +12,7 @@ set DENO_INSTALL $HOME/.deno
 ## Environment variable
 set -x GPG_TTY (tty)
 set -x PATH $HOME/.linuxbrew/bin $PATH
+set -x PATH $HOME/.linuxbrew/sbin $PATH
 set -x PATH /usr/local/opt/ruby/bin $PATH
 set -x PATH $DENO_INSTALL/bin $PATH
 
@@ -33,7 +34,5 @@ alias dot="$DOTPATH/app/dot.fish"
 alias ls="exa"
 alias g="git"
 
-## cd + ls
-function cd
-  builtin cd $argv; and ls
-end
+# Starship
+starship init fish | source
