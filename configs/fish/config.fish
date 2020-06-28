@@ -35,6 +35,7 @@ alias dot="$DOTPATH/app/dot.fish"
 ## Command alias
 alias ls="exa"
 alias g="git"
+alias tm="tmux new-session \; source-file ~/.tmux.session.conf"
 
 # anyenv
 status --is-interactive; and source (anyenv init -|psub)
