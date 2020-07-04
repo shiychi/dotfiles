@@ -39,8 +39,12 @@ highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
+let g:python3_host_prog = '/usr/bin/python'
+
 " Press O to insert new line
 nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
+
+let mapleader = ","
 
 set number
 
