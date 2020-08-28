@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 echo 'Installing Neovim...'
-brew install nvim
+brew install nvim --HEAD
 pip3 install pynvim
 
 echo 'Installing dein...'

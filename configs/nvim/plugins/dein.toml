@@ -19,13 +19,15 @@ repo = 'tpope/vim-fugitive'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-merged = 0
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = 'source ~/.config/nvim/plugins/LanguageClient-neovim.rc.vim'
 
 [[plugins]]
-repo = 'elzr/vim-json'
-hook_add = 'source ~/.config/nvim/plugins/vim-json.rc.vim'
+repo = 'Shougo/deoplete.nvim'
+build = ':UpdateRemotePlugins'
+hook_add = 'source ~/.config/nvim/plugins/deoplete.rc.vim'
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -49,4 +51,10 @@ hook_add = 'source ~/.config/nvim/plugins/indentLine.rc.vim'
 
 [[plugins]]
 repo = 'dag/vim-fish'
+
+[[plugins]]
+repo = 'qnighy/satysfi.vim'
+
+[[plugins]]
+repo = 'JuliaEditorSupport/julia-vim'
 

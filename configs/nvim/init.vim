@@ -36,7 +36,6 @@ endif
 "End dein Scripts-------------------------
 
 " Personal Settings
-source ~/.config/nvim/plugins/coc.rc.vim
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
@@ -63,4 +62,7 @@ set shiftwidth=2
 set expandtab
 set splitright
 set clipboard=unnamed
+
+autocmd BufNewFile,BufRead *.jl set filetype=julia
+autocmd BufNewFile,BufRead *.sh set filetype=bash
 " End Personal Settings
