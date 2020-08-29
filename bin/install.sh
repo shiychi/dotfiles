@@ -61,8 +61,8 @@ fi
 
 cd $DOTPATH
 /bin/bash ./homebrew/install.sh
-/bin/bash ./fish/install.sh
+/bin/bash ./zsh/install.sh
 /bin/bash ./tmux/install.sh
-ln -s $DOTPATH/configs/.gitconfig ~/.gitconfig
-mkdir ~/.config/alacritty/
-ln -s $DOTPATH/configs/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
+/bin/bash $DOTPATH/bin/link.sh $DOTPATH/configs/.gitconfig ~/.gitconfig
+/bin/bash $DOTPATH/bin/link.sh $DOTPATH/configs/alacritty/ ~/.config/alacritty/

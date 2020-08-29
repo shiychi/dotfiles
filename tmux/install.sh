@@ -13,13 +13,16 @@ if [ -f ~/.tmux.conf ]; then
 fi
 ln -s $DOTPATH/configs/tmux/.tmux.conf ~/.tmux.conf
 
-sudo bash -c "echo `which tmux` | sudo tee -a /etc/shells"
+if ! sudo grep zsh /etc/shells; then
+  sudo bash -c "echo `which zsh` | sudo tee -a /etc/shells"
+fi
 
 if [ ! $SHELL = $(which tmux) ]; then
-  echo "You need to change the default shell to $(which tmux)"
+  echo "You need to change the default shell to $(which zsh)"
 fi
 
 if [ -f ~/.tmux.session.conf ]; then
   rm ~/.tmux.session.conf
 fi
 ln -s $DOTPATH/configs/tmux/.tmux.session.conf ~/.tmux.session.conf
+
