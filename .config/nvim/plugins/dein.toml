@@ -19,6 +19,19 @@ repo = 'tpope/vim-fugitive'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
+repo = 'Shougo/denite.nvim'
+build = ':UpdateRemotePlugins'
+hook_add = 'source ~/.config/nvim/plugins/denite.rc.vim'
+
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+build = ':UpdateRemotePlugins'
+hook_add = 'source ~/.config/nvim/plugins/defx.rc.vim'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
+
+[[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 hook_add = 'source ~/.config/nvim/plugins/vim-lsp.rc.vim'
 
