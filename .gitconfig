@@ -7,3 +7,5 @@
 	helper = /usr/lib/git-core/git-credential-libsecret
 [ghq]
   root = ~/repos
+[init]
+	defaultBranch = main
