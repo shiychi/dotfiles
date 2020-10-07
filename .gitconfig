@@ -1,5 +1,5 @@
 [core]
-	excludesfile = ~/dotfiles/config/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [user]
 	email = 54768914+norozic@users.noreply.github.com
 	name = noroz
