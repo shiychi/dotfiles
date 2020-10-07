@@ -45,6 +45,7 @@ let g:python3_host_prog = '/usr/bin/python'
 
 " Press O to insert new line
 nnoremap <silent> O :<C-u>call append(expand('.'), '')<Cr>j
+nnoremap <silent> st :tabnew<Cr>:Defx<Cr>
 
 let mapleader = ","
 
