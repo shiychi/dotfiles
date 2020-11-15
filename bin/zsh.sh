@@ -25,4 +25,5 @@ $DOTPATH/bin/link.sh $DOTPATH/.config/zsh/.zshenv ~/.config/zsh/.zshenv
 $DOTPATH/bin/link.sh $DOTPATH/.config/zsh/.zshenv ~/.zshenv
 
 zsh -c "zinit self-update"
+zsh -c "fast-theme -t clean"
 

@@ -40,12 +40,21 @@ highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
+highlight LineNr ctermbg=NONE
+highlight clear SignColumn
+highlight GitGutterAdd ctermbg=NONE
+highlight GitGutterChange ctermbg=NONE
+highlight GitGutterDelete ctermbg=NONE
+highlight GitGutterChangeDelete ctermbg=NONE
+highlight ALEErrorSign ctermbg=NONE
+highlight ALEWarningSign ctermbg=NONE
+highlight ALEInfoSign ctermbg=NONE
 
 let g:python3_host_prog = '/usr/bin/python'
 
-" Press O to insert new line
 nnoremap <silent> O :<C-u>call append(expand('.'), '')<Cr>j
 nnoremap <silent> st :tabnew<Cr>:Defx<Cr>
+inoremap <silent> jj <ESC>
 
 let mapleader = ","
 

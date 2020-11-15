@@ -1,6 +1,6 @@
 let g:lightline = {
-  \ 'colorscheme': 'one',
+  \ 'colorscheme': 'iceberg',
   \ }
 
-let s:p = g:lightline#colorscheme#one#palette
+let s:p = g:lightline#colorscheme#iceberg#palette
 

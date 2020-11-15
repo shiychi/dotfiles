@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/hezrq/repos/github.com/41b1r30/webapp/src/components/molecules'
+let g:netrw_dirhist_0='/home/hezrq/repos/github.com/41b1r30/webapp/src/components'
+let g:netrw_dirhist_9='/home/hezrq/repos/github.com/41b1r30/webapp/src/components/atoms'
+let g:netrw_dirhist_8='/home/hezrq/repos/github.com/41b1r30/webapp/src/components'
+let g:netrw_dirhist_7='/home/hezrq/repos/github.com/41b1r30/webapp/src/components/molecules'
+let g:netrw_dirhist_6='/home/hezrq/repos/github.com/41b1r30/webapp/src/components'
+let g:netrw_dirhist_5='/home/hezrq/repos/github.com/41b1r30/webapp/node_modules'
+let g:netrw_dirhist_4='/home/hezrq/repos/github.com/hezrq/browse-log/packages'
 let g:netrw_dirhist_3='/home/hezrq/repos/github.com/41b1r30/webapp/src/stories'
 let g:netrw_dirhist_2='/home/hezrq/dotfiles/nvim'
-let g:netrw_dirhist_1='/home/hezrq/test_esp32/src/main.c'

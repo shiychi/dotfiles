@@ -7,6 +7,9 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 echo 'Installing tmux'
 brew install tmux
 
+echo 'Installing tpm'
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 echo 'Installing tmux config...'
 /bin/bash $DOTPATH/bin/link.sh $DOTPATH/.config/tmux/.tmux.conf ~/.tmux.conf
 

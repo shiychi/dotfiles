@@ -84,16 +84,11 @@ repo = 'leafgarland/typescript-vim'
 repo = 'peitalin/vim-jsx-typescript'
 
 [[plugins]]
-repo = 'dag/vim-fish'
+repo = 'cespare/vim-toml'
 
 [[plugins]]
 repo = 'qnighy/satysfi.vim'
 
 [[plugins]]
 repo = 'JuliaEditorSupport/julia-vim'
-
-[[plugins]]
-repo = 'glacambre/firenvim'
-hook_post_update = 'call firenvim#install(0)'
-hook_add = 'source ~/.config/nvim/plugins/firenvim.rc.vim'
 

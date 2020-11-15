@@ -3,10 +3,7 @@ DOTPATH=~/dotfiles
 ## Deno
 DENO_INSTALL=$HOME/.deno
 
-## Pipenv
-export PIPENV_VENV_IN_PROJECT=1
-
-## Cargo
+## Pipenv export PIPENV_VENV_IN_PROJECT=1 # Cargo
 if [ -f $HOME/.cargo/env ]; then
   source $HOME/.cargo/env
 fi
@@ -28,7 +25,7 @@ fi
 alias ls="exa"
 alias vi="nvim"
 alias g="git"
-alias tm="tmux source ~/.tmux.session.conf"
+alias t="tmuximum"
 
 # Use vim keybind
 bindkey -v
@@ -51,9 +48,6 @@ bindkey '^g' ghq-fzf
 # anyenv
 eval "$(anyenv init -)"
 
-# Starship
-eval "$(starship init zsh)"
-
 autoload bashcompinit
 bashcompinit
 source /home/hezrq/.linuxbrew/etc/bash_completion.d
@@ -62,6 +56,9 @@ fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
 autoload -U compinit
 compinit -u
+
+autoload -Uz colors
+colors
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.config/zsh/.zinit/bin/zinit.zsh ]]; then
@@ -87,13 +84,35 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 # plugins
-zinit ice wait '0'
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
-zinit light zdharma/fast-syntax-highlighting
-zinit light zdharma/history-search-multi-word
-zinit light rupa/z
+zinit ice as"program" pick"tmuximum"
+zinit load arks22/tmuximum
+zinit ice wait'!0'; zinit light zsh-users/zsh-autosuggestions
+zinit ice wait'!0'; zinit light zsh-users/zsh-completions
+zinit ice wait'!0'; zinit light zdharma/fast-syntax-highlighting
+zinit ice wait'!0'; zinit light zdharma/history-search-multi-word
+zinit ice wait'!0'; zinit light rupa/z
 
-if [[ ! -n $TMUX ]]; then
-  tmux
+if [ -z $TMUX ]; then
+  tmuximum
 fi
+
+function precmd() {
+  default_prompt="%(?.%{${fg[white]}%}.%{${fg[red]}%})%#%{${reset_color}%} "
+  dir="%F{magenta}$(print %~)%f"
+  if [ -n "$TMUX" ]; then
+    PROMPT=$default_prompt
+    tmux refresh-client -S
+  else
+    declare -a git_status_raw=($(git-status-conv))
+    git_branch=${git_status_raw[1]}
+    git_state=${git_status_raw[2]}
+    if [ -n "$git_branch" ]; then
+      git_info="%F{blue} ${git_branch}%f %F{red}${git_state}%f"
+    else
+      git_info=""
+    fi
+    PROMPT="""
+$dir $git_info
+$default_prompt"""
+  fi
+}

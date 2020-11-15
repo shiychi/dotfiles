@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if git_status=$(cd $1 && git status 2>/dev/null); then
+  declare -a git_status_raw=($(git-status-conv "$git_status"))
+  git_branch=${git_status_raw[0]}
+  git_state=${git_status_raw[1]}
+  git_info="#[fg=blue]  ${git_branch}#[fg=red] ${git_state}#[default] "
+else
+  git_info=" "
+fi
+
+directory="#[fg=magenta]$1#[default]"
+
+echo "$directory$git_info"
+
