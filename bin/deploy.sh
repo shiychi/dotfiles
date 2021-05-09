@@ -4,7 +4,7 @@ DOTPATH=~/dotfiles
 function link_file () {
   if [ -f $2 ]; then
     rm -f $2
-    echo -e "\e[31mError: There is a file with the same name\e[0m"
+    echo -e "\e[31mError: There is a file with the same name ($2)\e[0m"
   fi
 
   ln -sf $1 $2
