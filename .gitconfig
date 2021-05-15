@@ -1,17 +1,27 @@
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
+  pager = delta
+[delta]
+  features = side-by-side line-numbers decorations
+  whitespace-error-style = 22 reverse
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
 [ghq]
-	root = ~/repos
+  root = ~/repos
 [init]
-	defaultBranch = main
+  defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
 [credential]
-	helper = /usr/share/git/credential/netrc/git-credential-netrc.perl
+  helper = /usr/share/git/credential/netrc/git-credential-netrc.perl
 [user]
-	signingkey = A62CC42736387011C65138B840A7518878FDA639
+  signingkey = A62CC42736387011C65138B840A7518878FDA639
 [commit]
-	gpgsign = true
+  gpgsign = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true

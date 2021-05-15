@@ -42,6 +42,8 @@ else
   exit 1
 fi
 
+$DOTPATH/bin/deploy.sh
+
 # zsh
 echo "Setup zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
