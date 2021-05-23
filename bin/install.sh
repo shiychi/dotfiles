@@ -8,7 +8,7 @@ function install_pkg () {
 }
 
 paru -Syy
-install_pkg asdf
+install_pkg asdf-vm
 install_pkg clang
 install_pkg curl
 install_pkg direnv
