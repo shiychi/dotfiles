@@ -18,6 +18,8 @@
   helper = /usr/share/git/credential/netrc/git-credential-netrc.perl
 [user]
   signingkey = A62CC42736387011C65138B840A7518878FDA639
+	email = shiychi@protonmail.ch
+	name = shiychi
 [commit]
   gpgsign = true
 [filter "lfs"]

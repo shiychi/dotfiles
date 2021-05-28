@@ -4,11 +4,10 @@ require 'plugins'
 require 'coc'
 require 'fzf'
 require 'indentLine'
-require 'lightline'
 require 'vim-json'
 
 vim.cmd([[
-colorscheme iceberg
+colorscheme tokyonight
 syntax on
 
 highlight CursorLineNr ctermbg=NONE guibg=NONE
