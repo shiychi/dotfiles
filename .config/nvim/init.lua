@@ -48,6 +48,8 @@ vim.api.nvim_set_keymap('n', 'O', [[:<C-u>call append(expand("."), '')<Cr>j]], {
 vim.api.nvim_set_keymap('n', 'gf', ':<C-u>Format<Cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gq', ':<C-u>CocFix<Cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 's', ':<C-u>HopChar2<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>hr', ':%!xxd<Cr> :set filetype=xxd<Cr>', { noremap = true, silent = true }) -- Hex read
+vim.api.nvim_set_keymap('n', '<Leader>hw', ':%!xxd -r<Cr> :set binary<Cr> :set filetype=<Cr>', { noremap = true, silent = true }) -- Hex write
 
 -- fzf.vim
 vim.api.nvim_set_keymap('n', '<Leader>f', ':<C-u>GFiles<Cr>', { noremap = true, silent = true })
