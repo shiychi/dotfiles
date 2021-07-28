@@ -21,6 +21,7 @@ highlight clear SignColumn
 autocmd BufNewFile,BufRead *.jl set filetype=julia
 autocmd BufNewFile,BufRead *.sh set filetype=bash
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.go setlocal noet ts=8 sw=8 sts=8
 ]])
 
 vim.g.python3_host_prog = '/usr/bin/python'
