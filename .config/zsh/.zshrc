@@ -31,6 +31,7 @@ alias vi="nvim"
 alias lg="lazygit"
 alias g="git"
 alias rustcheck="RUSTFLAGS='-D warnings' cargo clippy && cargo fmt --all -- --check && cargo test"
+alias linesSource='cat $(fd . "./src/" --type f) | wc -l';
 
 # Use vim keybind
 bindkey -v
@@ -41,6 +42,15 @@ export EDITOR=nvim
 # prompt
 export PURE_PROMPT_SYMBOL='%%'
 
+function nvim-fzf() {
+  local src=$(fd --type f | fzf)
+  if [ -n "$src" ]; then
+    BUFFER="nvim '$src'"
+    zle accept-line
+  fi
+  zle -R -c
+}
+
 function ghq-fzf() {
   local src=$(ghq list | fzf)
   if [ -n "$src" ]; then
@@ -50,8 +60,11 @@ function ghq-fzf() {
   zle -R -c
 }
 
+zle -N nvim-fzf
 zle -N ghq-fzf
+
 bindkey '^g' ghq-fzf
+bindkey 'nf' nvim-fzf
 
 # direnv
 eval "$(direnv hook zsh)"
